@@ -1,3 +1,5 @@
+using Azure.Core;
+using Azure;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -13,13 +15,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<FormOptions>(options =>
 {
-  options.ValueCountLimit = int.MaxValue;
-  options.MultipartBodyLengthLimit = int.MaxValue;
-  options.MemoryBufferThreshold = int.MaxValue;
+    options.ValueCountLimit = int.MaxValue;
+    options.MultipartBodyLengthLimit = int.MaxValue;
+    options.MemoryBufferThreshold = int.MaxValue;
 });
 
 builder.Services.AddDbContext<SistemaJuridicoDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("SistemaJuridicoConnectionString")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 var app = builder.Build();
@@ -27,18 +29,18 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.UseSwagger();
-  app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
 }
 
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 
-app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions()
 {
-  FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
-  RequestPath = new PathString("/Resources")
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+    RequestPath = new PathString("/Resources")
 });
 
 app.UseHttpsRedirection();
