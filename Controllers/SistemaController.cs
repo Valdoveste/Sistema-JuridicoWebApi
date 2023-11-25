@@ -647,7 +647,8 @@ namespace SistemaJuridicoWebAPI.Controllers
         {
             var processoAcordo = await _sistemaJuridicoDbContext.PROCESSO_ACORDO
                 .Where(x => x.ID_PROCESSO.Equals(id))
-                .ToListAsync();
+                .OrderByDescending(x => x.DATA_ACORDO)
+                .ToListAsync(); 
 
             return Ok(processoAcordo);
         }
@@ -721,6 +722,7 @@ namespace SistemaJuridicoWebAPI.Controllers
         {
             var processoAndamento = await _sistemaJuridicoDbContext.PROCESSO_ANDAMENTO
                 .Where(x => x.ID_PROCESSO.Equals(id))
+                .OrderByDescending(x => x.DATA_ANDAMENTO)
                 .ToListAsync();
 
             return Ok(processoAndamento);

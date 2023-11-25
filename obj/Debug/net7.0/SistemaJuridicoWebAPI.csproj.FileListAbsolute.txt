@@ -75,3 +75,8 @@ C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridico
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\obj\Debug\net7.0\SistemaJuridicoWebAPI.pdb
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\obj\Debug\net7.0\SistemaJuridicoWebAPI.genruntimeconfig.cache
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\obj\Debug\net7.0\ref\SistemaJuridicoWebAPI.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
