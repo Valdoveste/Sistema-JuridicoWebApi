@@ -43,7 +43,7 @@ namespace SistemaJuridicoWebAPI.Controllers
         public async Task<IActionResult> AddProcess([FromBody] PROCESSO processoRequest)
         {
 
-            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             processoRequest.DATA_CADASTRO_PROCESSO = TimeZoneInfo.ConvertTime(DateTime.Now, brazilTimeZone).ToString("dd/MM/yyyyTHH:mm:ss");
 
@@ -113,7 +113,7 @@ namespace SistemaJuridicoWebAPI.Controllers
             if (processo == null)
                 return NotFound();
 
-            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             processo.DATA_ENCERRAMENTO = TimeZoneInfo.ConvertTime(DateTime.Now, brazilTimeZone).ToString("dd/MM/yyyyTHH:mm:ss");
 
@@ -197,7 +197,7 @@ namespace SistemaJuridicoWebAPI.Controllers
         [HttpPost("add-log-processo/{id}")]
         public async Task<IActionResult> AddProcessoLog(PROCESSO_LOG_ALTERACOES logProcesso)
         {
-            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             logProcesso.DATA_ALTERACAO = TimeZoneInfo.ConvertTime(DateTime.Now, brazilTimeZone).ToString("dd/MM/yyyyTHH:mm:ss");
 

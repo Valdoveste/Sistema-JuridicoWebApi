@@ -7,11 +7,11 @@ namespace SistemaJuridicoWebAPI.Controllers
 {
     [Controller]
     [Route("api/[controller]")]
-    public class AreaDireitoController : Controller
+    public class AreaDoDireitoController : Controller
     {
         private readonly SistemaJuridicoDbContext _sistemaJuridicoDbContext;
 
-        public AreaDireitoController(SistemaJuridicoDbContext sistemaJuridicoDbContext)
+        public AreaDoDireitoController(SistemaJuridicoDbContext sistemaJuridicoDbContext)
         {
             _sistemaJuridicoDbContext = sistemaJuridicoDbContext;
         }

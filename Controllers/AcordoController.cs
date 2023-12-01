@@ -76,7 +76,7 @@ namespace SistemaJuridicoWebAPI.Controllers
         [HttpPost("add-acordo")]
         public async Task<IActionResult> AddAcordo([FromBody] PROCESSO_ACORDO acordoRequest)
         {
-            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             acordoRequest.DATA_ACORDO = TimeZoneInfo.ConvertTime(DateTime.Now, brazilTimeZone).ToString("dd/MM/yyyyTHH:mm:ss");
 

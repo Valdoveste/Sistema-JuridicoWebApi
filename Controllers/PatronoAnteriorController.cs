@@ -20,7 +20,7 @@ namespace SistemaJuridicoWebAPI.Controllers
         public async Task<IActionResult> AddPatronoAnterior([FromBody] PROCESSO_PATRONOS_ANTERIORES patronoAnteriorRequest)
         {
 
-            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             patronoAnteriorRequest.DATA_ALTERACAO = TimeZoneInfo.ConvertTime(DateTime.Now, brazilTimeZone).ToString("dd/MM/yyyyTHH:mm:ss");
 
