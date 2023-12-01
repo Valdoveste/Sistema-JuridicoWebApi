@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaJuridicoWebAPI.Data;
 using SistemaJuridicoWebAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SistemaJuridicoWebAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class BuscaAvancada : Controller
