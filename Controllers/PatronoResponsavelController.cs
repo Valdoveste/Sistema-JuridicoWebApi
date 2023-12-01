@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace SistemaJuridicoWebAPI.Controllers
 {
     [Controller]
-    [Route("api/[controller ]")]
+    [Route("api/[controller]")]
     public class PatronoResponsavelController : Controller
     {
         private readonly SistemaJuridicoDbContext _sistemaJuridicoDbContext;

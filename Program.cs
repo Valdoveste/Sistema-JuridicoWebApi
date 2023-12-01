@@ -34,16 +34,17 @@ if (app.Environment.IsDevelopment())
 
 }
 
+app.UseHttpsRedirection();
+app.UseCors("CorsPolicy");
+
 app.UseStaticFiles(new StaticFileOptions()
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
     RequestPath = new PathString("/Resources")
 });
 
-app.UseHttpsRedirection();
-
-app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-
 app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
