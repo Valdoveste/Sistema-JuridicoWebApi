@@ -20,8 +20,10 @@ namespace SistemaJuridicoWebAPI.Controllers
         public LoginController(IConfiguration configuration, SistemaJuridicoDbContext sistemaJuridicoDbContext)
         {
             _secret = configuration.GetSection("SecretKey").Value;
+            _sistemaJuridicoDbContext = sistemaJuridicoDbContext;
         }
-        public string GenerateToken(USUARIO usuario)
+
+        private string GenerateToken(USUARIO usuario)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_secret);
@@ -32,7 +34,7 @@ namespace SistemaJuridicoWebAPI.Controllers
                     new Claim("id", usuario.ID_USUARIO.ToString()),
                     new Claim("nome", usuario.NOME_USUARIO!),
                     new Claim("tipo", usuario.ACESSO_GESTAO.ToString()),
-                    
+
                 }),
                 Expires = DateTime.UtcNow.AddHours(4),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -44,13 +46,22 @@ namespace SistemaJuridicoWebAPI.Controllers
         [HttpPost("auth")]
         public async Task<ActionResult<dynamic>> AuthAsync([FromBody] USUARIO dto)
         {
-            var usuarionDTO = await _sistemaJuridicoDbContext.USUARIO.FirstOrDefaultAsync(x => x.NOME_USUARIO.Equals(dto.NOME_USUARIO) && x.SENHA.Equals(dto.SENHA));
-
+            var usuarionDTO = await _sistemaJuridicoDbContext.USUARIO
+                .Where(x => x.NOME_USUARIO.Equals(dto.NOME_USUARIO) && x.SENHA.Equals(dto.SENHA))
+                .Select(x => new USUARIO
+                {
+                    ID_USUARIO = x.ID_USUARIO,
+                    NOME_USUARIO = x.NOME_USUARIO,
+                    ACESSO_GESTAO = x.ACESSO_GESTAO
+                })
+                .FirstOrDefaultAsync();
+       
             if (usuarionDTO == null)
                 return NotFound();
 
             string token = this.GenerateToken(usuarionDTO);
-            return Ok(new { token = token });
+            return Ok(new { token = token, usuarionDTO });
         }
+
     }
 }
