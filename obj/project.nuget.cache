@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NxdrTLCS57+M5nBmvwsD/pktZMfj5WXOabgDZ6x20YJnJGj6KdnDIReLd7rHJFoMZAetpsdDsHOPfFoEaxWvbQ==",
+  "dgSpecHash": "Bett4Ppxz0bpmQrCTKptmlm0Ai+TYbxTsbeDwIJJclAM6BlcVCDjvKdJa6zuRQRBmt1ymtt+t3BNv0oNtsE59A==",
   "success": true,
   "projectFilePath": "C:\\Users\\caiov\\OneDrive\\Área de Trabalho\\Sistema-JuridicoWebApi\\SistemaJuridicoWebAPI\\SistemaJuridicoWebAPI.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.3.0\\microsoft.aspnet.webapi.core.5.3.0.nupkg.sha512",
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.aspnet.webapi.cors\\5.3.0\\microsoft.aspnet.webapi.cors.5.3.0.nupkg.sha512",
+    "C:\\Users\\caiov\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.11\\microsoft.aspnetcore.authentication.jwtbearer.5.0.11.nupkg.sha512",
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\caiov\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

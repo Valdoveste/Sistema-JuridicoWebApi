@@ -80,3 +80,4 @@ C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridico
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Web.Http.dll
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\System.Web.Http.Cors.dll
 C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\caiov\OneDrive\Área de Trabalho\Sistema-JuridicoWebApi\SistemaJuridicoWebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
